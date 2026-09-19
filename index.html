@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Ica</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            color: #222;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 18px 8%;
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            z-index: 1000;
+        }
+
+        nav h2 {
+            font-size: 22px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #222;
+            margin-left: 25px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #777;
+        }
+
+        section {
+            padding: 100px 10%;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #777;
+        }
+
+        .hero p {
+            font-size: 19px;
+            line-height: 1.7;
+            max-width: 650px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 13px 25px;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .button:hover {
+            background: #555;
+        }
+
+        .title {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .about p {
+            max-width: 750px;
+            line-height: 1.8;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .contact p {
+            margin: 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #222;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav a {
+                margin-left: 10px;
+                font-size: 12px;
+            }
+
+            section {
+                padding: 90px 7%;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>ICA</h2>
+
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Hi, I'm <span>Ica</span> 👋</h1>
+
+        <p>
+            Mahasiswa Teknik Informatika yang tertarik pada teknologi,
+            pemrograman, dan pengembangan berbagai proyek digital.
+        </p>
+
+        <a href="#projects" class="button">Lihat Portfolio</a>
+    </section>
+
+    <section class="about" id="about">
+        <h2 class="title">About Me</h2>
+
+        <p>
+            Halo! Saya Ica. Saya memiliki ketertarikan pada dunia teknologi
+            dan pengembangan website. Saya senang mempelajari hal-hal baru,
+            mengembangkan kemampuan teknis, serta mengubah ide menjadi
+            sebuah proyek yang dapat digunakan.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2 class="title">Skills</h2>
+
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Basic Programming</div>
+            <div class="skill">Microsoft Word</div>
+            <div class="skill">Microsoft Excel</div>
+            <div class="skill">Basic Networking</div>
+            <div class="skill">Electronics</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="title">Projects</h2>
+
+        <div class="projects">
+
+            <div class="card">
+                <h3>Portfolio Website</h3>
+                <p>
+                    Website portfolio pribadi untuk menampilkan profil,
+                    kemampuan, dan berbagai pengalaman.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Automatic Cat Water Dispenser</h3>
+                <p>
+                    Proyek perangkat elektronik berupa alat minum kucing
+                    otomatis dengan sistem pompa dan penyaringan air.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Electronics Project</h3>
+                <p>
+                    Berbagai proyek elektronika yang dibuat selama proses
+                    pembelajaran dan pengembangan keterampilan teknis.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="title">Contact</h2>
+
+        <p>📧 Email: emailkamu@example.com</p>
+        <p>📱 Instagram: @usernamekamu</p>
+        <p>💻 GitHub: github.com/usernamekamu</p>
+    </section>
+
+    <footer>
+        © 2026 Ica. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
