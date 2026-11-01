@@ -678,32 +678,125 @@
   <p>Computing Components merupakan bagian penting komputer yang bekerja sama untuk memproses data, menyimpan informasi, menghubungkan perangkat, dan menyediakan daya listrik.</p>
 </section>
 <section>
-    <h2>Bab 7: Input and Output</h2>
-    <p>Bab ini membahas berbagai perangkat keras yang digunakan untuk memasukkan data ke dalam komputer serta menyajikan data yang telah diproses kepada pengguna.</p>
+   # 💻 Makalah: Sistem Input dan Output (I/O) pada Komputer
 
-    <h3>1. Pengertian Masukan (Input)</h3>
-    <p><b>Input</b> adalah segala data dan instruksi yang dimasukkan ke dalam memori komputer.</p>
-    <ul>
-        <li><b>Keyboard:</b> Perangkat masukan utama (standar, ergonomis, nirkabel, gaming, dan <i>on-screen</i>).</li>
-        <li><b>Pointing Devices:</b> Perangkat penunjuk seperti <i>mouse</i> (optik, laser, sentuh), <i>touchpad</i>, dan <i>trackball</i>.</li>
-        <li><b>Touch Screen & Pen Input:</b> Layar sensitif sentuhan serta penggunaan <i>stylus</i>, pena digital, dan <i>graphics tablet</i> (digitizer).</li>
-        <li><b>Motion, Voice, & Video Input:</b> Pengenalan gestur tubuh, pengenalan suara (<i>speech recognition</i>), perekaman audio, serta tangkapan video melalui <i>webcam</i> dan konferensi video.</li>
-        <li><b>Scanners & Reading Devices:</b> Pemindai gambar (<i>flatbed scanner</i>), pembaca kode batang (<i>bar code</i> & QR code), RFID, <i>magstripe reader</i>, MICR (untuk pemrosesan cek bank), dan <i>data collection device</i>.</li>
-    </ul>
+> **Disusun untuk memenuhi tugas mata kuliah / pelajaran Teknologi Informasi dan Komunikasi (TIK)**
 
-    <h3>2. Pengertian Keluaran (Output)</h3>
-    <p><b>Output</b> adalah data yang telah diproses menjadi bentuk yang berguna (teks, grafis, audio, dan video).</p>
-    <ul>
-        <li><b>Displays:</b> Layar visual seperti monitor LCD, laptop, hingga TV Digital (HDTV & Smart TV) yang terhubung melalui port DVI, HDMI, atau DisplayPort.</li>
-        <li><b>Printers:</b> Perangkat cetak fisik yang terbagi menjadi:
-            <ul>
-                <li><i>Nonimpact Printer:</i> Ink-jet, laser, all-in-one, 3-D printer, printer termal, printer seluler, printer label, dan plotter.</li>
-                <li><i>Impact Printer:</i> Printer yang mencetak dengan mekanisme ketukan pada pita bertinta.</li>
-            </ul>
-        </li>
-        <li><b>Perangkat Output Lainnya:</b> Speaker (termasuk <i>surround sound</i>), headphone, earbuds, proyektor data, <i>interactive whiteboard</i>, dan pengontrol game dengan fitur <i>force feedback</i>.</li>
-        <li><b>Assistive Technology:</b> Perangkat bantu khusus untuk pengguna dengan disabilitas, seperti <i>head-mounted pointer</i> dan <i>braille printer</i>.</li>
-    </ul>
+---
+
+## 📌 Kata Pengantar
+
+Puji syukur kehadirat Tuhan Yang Maha Esa atas rahmat dan karunia-Nya sehingga makalah yang berjudul **"Sistem Input dan Output (I/O) pada Komputer"** ini dapat diselesaikan dengan baik. 
+
+Makalah ini disusun untuk memberikan pemahaman menyeluruh mengenai konsep, fungsi, serta jenis-jenis perangkat keras (*hardware*) yang tergolong dalam sistem masukan (*input*) dan keluaran (*output*) pada komputer. Penulis menyadari bahwa makalah ini masih jauh dari sempurna. Oleh karena itu, kritik dan saran yang membangun sangat diharapkan demi perbaikan di masa mendatang.
+
+*Jakarta, 2026*
+
+---
+
+## 📋 Daftar Isi
+
+- [BAB I: Pendahuluan](#-bab-i-pendahuluan)
+  - [1.1 Latar Belakang](#11-latar-belakang)
+  - [1.2 Rumusan Masalah](#12-rumusan-masalah)
+  - [1.3 Tujuan Penulisan](#13-tujuan-penulisan)
+- [BAB II: Pembahasan](#-bab-ii-pembahasan)
+  - [2.1 Pengertian Perangkat Input dan Output](#21-pengertian-perangkat-input-dan-output)
+  - [2.2 Perangkat Masukan (Input Device)](#22-perangkat-masukan-input-device)
+  - [2.3 Perangkat Keluaran (Output Device)](#23-perangkat-keluaran-output-device)
+  - [2.4 Perangkat Input Sekaligus Output (I/O Combined)](#24-perangkat-input-sekaligus-output-io-combined)
+  - [2.5 Cara Kerja dan Komunikasi I/O dengan CPU](#25-cara-kerja-dan-komunikasi-io-dengan-cpu)
+- [BAB III: Penutup](#-bab-iii-penutup)
+  - [3.1 Kesimpulan](#31-kesimpulan)
+  - [3.2 Saran](#32-saran)
+- [📚 Daftar Pustaka](#-daftar-pustaka)
+
+---
+
+## 🚀 BAB I: Pendahuluan
+
+### 1.1 Latar Belakang
+Komputer merupakan alat elektronik yang dirancang untuk menerima data, memproses data, dan menghasilkan informasi secara cepat dan akurat. Dalam siklus pengolahan data tersebut, komputer tidak dapat bekerja sendirian tanpa adanya interaksi dengan pengguna (*user*) maupun lingkungan sekitarnya.
+
+Untuk melakukan interaksi tersebut, komputer membutuhkan sarana berupa perangkat input (*masukan*) dan perangkat output (*keluaran*). Tanpa adanya perangkat input, pengguna tidak dapat memberikan instruksi atau memasukkan data ke dalam sistem. Sebaliknya, tanpa perangkat output, hasil pemrosesan data yang dilakukan oleh processor tidak akan bisa dilihat, didengar, atau dimanfaatkan oleh pengguna.
+
+### 1.2 Rumusan Masalah
+1. Apa yang dimaksud dengan perangkat input dan output pada komputer?
+2. Apa saja jenis-jenis perangkat input beserta fungsinya?
+3. Apa saja jenis-jenis perangkat output beserta fungsinya?
+4. Bagaimana alur komunikasi dan cara kerja perangkat I/O dengan CPU?
+
+### 1.3 Tujuan Penulisan
+- Menjelaskan konsep dasar perangkat input dan output pada sistem komputer.
+- Mengidentifikasi jenis dan fungsi dari masing-masing perangkat I/O.
+- Memahami alur pemrosesan data antara perangkat masukan/keluaran dan unit pemrosesan utama (*CPU*).
+
+---
+
+## 🛠️ BAB II: Pembahasan
+
+### 2.1 Pengertian Perangkat Input dan Output
+
+| Jenis Perangkat | Definisi Singkat | Fungsi Utama |
+| :--- | :--- | :--- |
+| **Input Device** | Perangkat keras (*hardware*) yang digunakan untuk memasukkan data/perintah ke komputer. | Memasukkan data mentah dari luar ke sistem. |
+| **Output Device** | Perangkat keras yang bertugas menampilkan/mengeluarkan hasil olahan data dari komputer. | Menyajikan informasi kepada pengguna (*softcopy* / *hardcopy*). |
+
+---
+
+### 2.2 Perangkat Masukan (Input Device)
+
+<details>
+<summary>🔍 Klik di sini untuk melihat detail Perangkat Input</summary>
+
+1. **Keyboard**  
+   - *Fungsi:* Memasukkan data berupa karakter (huruf, angka, simbol) dan perintah kontrol ke dalam sistem.
+2. **Mouse / Touchpad**  
+   - *Fungsi:* Perangkat penunjuk (*pointing device*) untuk mengontrol kursor pada antarmuka grafis (GUI).
+3. **Scanner**  
+   - *Fungsi:* Mengubah dokumen cetak (gambar atau teks) menjadi format digital (*softcopy*).
+4. **Microphone**  
+   - *Fungsi:* Mengubah gelombang suara menjadi sinyal audio digital untuk diproses komputer.
+5. **Webcam**  
+   - *Fungsi:* Mengambil sinyal visual atau video secara langsung ke dalam sistem.
+
+</details>
+
+---
+
+### 2.3 Perangkat Keluaran (Output Device)
+
+<details>
+<summary>🔍 Klik di sini untuk melihat detail Perangkat Output</summary>
+
+1. **Monitor**  
+   - *Fungsi:* Menampilkan hasil pemrosesan data dalam bentuk antarmuka visual, teks, dan video.
+2. **Printer**  
+   - *Fungsi:* Mencetak data digital (teks/gambar) dari komputer ke media fisik seperti kertas.
+3. **Speaker / Headphone**  
+   - *Fungsi:* Mengeluarkan sinyal suara/audio hasil pemrosesan komputer.
+4. **Proyektor**  
+   - *Fungsi:* Memproyeksikan tampilan visual monitor ke media layar lebar atau dinding.
+
+</details>
+
+---
+
+### 2.4 Perangkat Input Sekaligus Output (I/O Combined)
+
+Beberapa perangkat keras memiliki fungsi ganda:
+- **Layar Sentuh (*Touchscreen*):** Memasukkan data lewat sentuhan (input) sekaligus menampilkan gambar (output).
+- **Drive Penyimpanan Eksternal:** Menyimpan data dari komputer (output) dan membaca data ke komputer (input).
+
+---
+
+### 2.5 Cara Kerja dan Komunikasi I/O dengan CPU
+
+```text
+ [ Pengguna ] ──> ( Input Device ) ──> [ I/O Module / Bus ]
+                                              │
+                                              ▼
+ [ Informasi ] <── ( Output Device ) <── [ CPU & RAM ]
 </section>
         <h2 class="title">Contact</h2>
 
